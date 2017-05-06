@@ -47,6 +47,10 @@ curl -XPUT \
               "type": "keyword"
             }
           }
+        },
+        "timestamp": {
+          "type": "integer"
+          }
         }
       }
     }
