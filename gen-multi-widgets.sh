@@ -5,7 +5,7 @@
 STATES=9
 WIDGETS=10
 # increase to 10000 to make 1,000,000 widget states
-TOTAL=10
+TOTAL=10000
 
 N=1
 

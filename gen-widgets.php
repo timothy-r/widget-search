@@ -44,7 +44,7 @@ function generateWidgetState($time, $i, $previousWidget, &$states)
     $widget = [];
     $widget['urn'] = "urn:tjr:widget.$i";
     $widget['timestamp'] = (integer) $time;
-    $widget['type'] = "tjr.widget";
+    $widget['type'] = "tjr.stock.widget";
 
     if (!count($previousWidget)) {
         $widget['price'] = rand(100, 1000);
@@ -52,8 +52,11 @@ function generateWidgetState($time, $i, $previousWidget, &$states)
         $widget['event'] = 'tjr.widget.new';
         $widget['colour'] = randomColour();
         $widget['state'] = 'new';
+        $widget['city'] = randomCity();
 
     } else {
+
+        $widget['city'] = $previousWidget['city'];
 
         if (rand(0,1)){
             $widget['price'] = $previousWidget['price'];
@@ -78,7 +81,9 @@ function generateWidgetState($time, $i, $previousWidget, &$states)
 
 function randomColour()
 {
-    $colours = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    $colours = ['red','orange','yellow','green','blue','indigo','violet',
+        'brown','black','white', 'pink','scarlet','grey','turquoise','vermillion',
+        'silver','gold','khaki',''];
     return $colours[rand(0, count($colours)-1)];
 }
 
@@ -86,6 +91,15 @@ function randomState()
 {
     $states = ['on-sale', 'discontinued', 'normal-price', 'half-price', 'out-of-stock'];
     return $states[rand(0, count($states)-1)];
+}
+
+function randomCity()
+{
+    $cities = ['London', 'Manchester', 'Leeds', 'Glasgow', 'Birmingham', 'Liverpool', 'Edingburgh', 'Bristol',
+    'Cardiff', 'Brighton', 'Leicester', 'Aberdeen', 'Belfast', 'Dublin','Paris','Lyon','Berlin','Amsterdam',
+    'Athens','Rome','Naples','Lisbon','Madrid','Barcelona','Brussels','Geneva','Istanbul','Helsinki','Copenhagen',
+    'Oslo', 'Stockholm'];
+    return $cities[rand(0, count($cities)-1)];
 }
 
 
