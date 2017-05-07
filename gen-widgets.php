@@ -83,7 +83,7 @@ function randomColour()
 {
     $colours = ['red','orange','yellow','green','blue','indigo','violet',
         'brown','black','white', 'pink','scarlet','grey','turquoise','vermillion',
-        'silver','gold','khaki',''];
+        'silver','gold','khaki'];
     return $colours[rand(0, count($colours)-1)];
 }
 

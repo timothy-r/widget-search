@@ -20,7 +20,7 @@ curl -XGET \
                         "sort": [
                             {
                                 "timestamp": {
-                                    "order": "asc"
+                                    "order": "desc"
                                 }
                             }
                         ],

@@ -1,0 +1,17 @@
+{
+  "size": 0,
+  "aggs": {
+    "widgets": {
+      "terms": {
+        "field": "__TERM__"
+      },
+      "aggs" : {
+        "latest" : {
+          "max" : {
+            "field" : "timestamp"
+          }
+        }
+      }
+    }
+  }
+}
