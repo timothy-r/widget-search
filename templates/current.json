@@ -1,0 +1,19 @@
+{
+  "query": {
+    "bool": {
+      "must": {
+        "match": {
+          "urn": "__URN__"
+        }
+      }
+    }
+  },
+  "sort" : [
+    {
+      "timestamp" : {
+        "order" : "desc"
+      }
+    }
+  ],
+  "size" : 1
+}
