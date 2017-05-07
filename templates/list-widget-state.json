@@ -9,7 +9,7 @@
         }
       },
       "aggs": {
-        "most_recent_widget": {
+        "most_recent_state": {
           "top_hits": {
             "sort": [
               {

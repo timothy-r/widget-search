@@ -112,7 +112,7 @@ function printWidgets(array $all)
 
 function printWidget(array $widget)
 {
-    echo '{ "index" : { "_index" : "stock", "_type" : "widget"} }';
+    echo '{ "index" : {} }';
     echo "\n";
     echo json_encode($widget);
     echo "\n";

@@ -12,5 +12,5 @@ DATA=`sed "s/__TERM__/$TERM/" templates/group.json`
 
 curl -XGET \
   -H "Content-type: application/json" \
-  "$INDEX/_search?pretty" \
+  "$HOST/$INDEX/$TYPE/_search?pretty" \
   --data-binary "$DATA"

@@ -12,5 +12,5 @@ DATA=`sed "s/__KEY__/$KEY/; s/__VALUE__/$VALUE/; s/__TERM__/$TERM/" templates/bu
 
 curl -XGET \
   -H "Content-type: application/json" \
-  "$INDEX/_search?pretty" \
+  "$HOST/$INDEX/$TYPE/_search?pretty" \
   --data-binary "$DATA"

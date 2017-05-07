@@ -7,5 +7,5 @@ FILE=$1
 
 curl -XGET \
    -H "Content-type: application/json" \
-   "$INDEX/_search?pretty" \
+   "$HOST/$INDEX/$TYPE/_search?pretty" \
    -d @$FILE
