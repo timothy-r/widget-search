@@ -1,7 +1,0 @@
-#export HOST=https://$host.es.amazonaws.com
-#export INDEX=index-name
-#export TYPE=type-name
-
-export HOST=https://search-trodger-e3ixwysobh5q7tqbo3qv4kopqu.eu-west-2.es.amazonaws.com
-export INDEX=stock
-export TYPE=widget
