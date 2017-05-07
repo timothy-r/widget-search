@@ -1,5 +1,15 @@
 {
   "size": 0,
+  "query" : {
+    "bool" : {
+      "filter" : [
+        {
+          "term": {
+            "city": "London"
+          }
+        }]
+    }
+  },
   "aggs": {
     "widgets": {
       "terms": {
@@ -21,12 +31,28 @@
             "size": 1
           }
         },
+        "colour_green" : {
+          "filter" : {
+            "term" : {
+              "colour" : "green"
+            }
+          }
+        },
         "maxDate": {
           "max": {
             "field": "timestamp"
           }
         }
       }
+    }
+  },
+  "post_filter": {
+    "bool" : {
+      "must" : [{
+        "term" : {
+          "colour": "green"
+        }
+      }]
     }
   }
 }
