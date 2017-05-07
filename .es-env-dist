@@ -1,0 +1,4 @@
+export HOST=https://$host.es.amazonaws.com
+export INDEX=index-name
+export TYPE=type-name
+
