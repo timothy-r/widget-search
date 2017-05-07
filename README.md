@@ -1,2 +1,2 @@
-# widget-search
-Experiments with ElasticSearch
+# Widget search
+Experiments with ElasticSearch.
