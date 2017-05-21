@@ -1,0 +1,27 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::752934489335:root"
+      },
+      "Action": "es:*",
+      "Resource": "arn:aws:es:eu-west-2:752934489335:domain/trodger/*"
+    },
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "es:*",
+      "Resource": "arn:aws:es:eu-west-2:752934489335:domain/trodger/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "109.147.56.212"
+        }
+      }
+    }
+  ]
+}

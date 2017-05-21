@@ -1,0 +1,88 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::xxxxxxxxxxxx:root"
+      },
+      "Action": "es:*",
+      "Resource": "arn:aws:es:us-west-2:xxxxxxxxxxxx:domain/my-elasticsearch-domain/*"
+    },
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "es:*",
+      "Resource": "arn:aws:es:us-west-2:xxxxxxxxxxxx:domain/my-elasticsearch-domain/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": [
+            "192.168.1.0",
+            "192.168.1.1"
+          ]
+        }
+      }
+    }
+  ]
+}
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::752934489335:root"
+      },
+      "Action": "es:*",
+      "Resource": "arn:aws:es:eu-west-2:752934489335:domain/trodger/*"
+    },
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "es:*",
+      "Resource": "arn:aws:es:eu-west-2:752934489335:domain/trodger/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "86.162.113.111"
+        }
+      }
+    }
+  ]
+}
+
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::752934489335:tjr"
+      },
+      "Action": "es:*",
+      "Resource": "arn:aws:es:eu-west-2:752934489335:domain/trodger/*"
+    },
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "es:*",
+      "Resource": "arn:aws:es:eu-west-2:752934489335:domain/trodger/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "86.162.113.111"
+        }
+      }
+    }
+  ]
+}
+

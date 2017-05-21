@@ -13,10 +13,7 @@
   "aggs": {
     "widgets": {
       "terms": {
-        "field": "urn",
-        "order": {
-          "maxDate": "desc"
-        }
+        "field": "urn"
       },
       "aggs": {
         "most_recent_state": {
@@ -37,22 +34,8 @@
               "colour" : "green"
             }
           }
-        },
-        "maxDate": {
-          "max": {
-            "field": "timestamp"
-          }
         }
       }
-    }
-  },
-  "post_filter": {
-    "bool" : {
-      "must" : [{
-        "term" : {
-          "colour": "green"
-        }
-      }]
     }
   }
 }

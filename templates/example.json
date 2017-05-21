@@ -1,0 +1,28 @@
+{
+    "aggs": {
+    "last_score": {
+        "terms": {
+            "field": "player"
+        },
+        "aggs": {
+            "last_score_hits": {
+                "top_hits": {
+                    "sort": [
+                        {
+                            "timestamp": {
+                                "order": "desc"
+                            }
+                        }
+                    ],
+                        "size": 1
+                }
+            },
+            "avg_score": {
+                "avg": {
+                    "field": "score"
+                }
+            }
+        }
+    }
+}
+}

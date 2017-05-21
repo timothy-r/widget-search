@@ -1,0 +1,10 @@
+[
+  {
+    "role": "forum-admin",
+    "member": "urn:app:user:x"
+  },
+  {
+    "role": "forum-admin",
+    "group": "urn:app:group:y"
+  }
+]
